@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>listing an Emp details</h2>
+
+<table >
+	<thead><tr><th> s no </th><th> Name </th><th> age </th><th> Empid </th><th> Gender </th></tr></thead>
+	<tbody id="demo"></tbody>
+</table>
+<br>
+<button type="submit" onClick="addEmp();">Add Emp</button>
+<br><br>
+
+<form>
+	<div>
+		<p> Name</p>
+		<span class="error" id="nameError"></span>
+		<input type="text" id="newName" placeholder="enter ur name"/>
+	</div>
+	<div>
+		<p> Age</p>
+		<span class="error" id="ageError"></span>
+		<input type="number" id="newAge" placeholder="enter ur age"/>
+	</div>
+	<div>
+		<p> Empid</p>
+		<span class="error" id="empIdError"></span>
+		<input type="number" id="newEmpid" placeholder="enter ur Emp id"/>
+	</div>
+	<div>
+		<p> Gender</p>
+		<input type="radio" name="newGender" value="Male" id="newGenderMale" checked/><label for="newGenderMale">Male</label>
+		<input type="radio" name="newGender" value="Female" id="newGenderFemale"/><label for="newGenderFemale">Female</label>
+	</div>
+	<button type="button" class="submit" onClick="addNewEmp();">Add New Emp</button>
+</form>
+
+
+<style>
+table{
+	border-collapse: collapse;
+}
+table th{
+	border: 1px solid #fff;
+	padding: 10px;
+	background: #ccc;
+}
+table td{
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+form{
+	width: 48%;
+    border: 1px solid #ccc;
+    padding: 19px;
+    float: left;
+}
+ p{
+	margin: 0;
+	padding: 0;
+}
+form div {
+    margin-bottom: 15px;
+}
+form div p {
+    margin-bottom: 8px;
+}
+.error{
+	display: block;
+	color: red;
+	margin-bottom: 5px;
+}
+.error + input {
+    padding: 7px;
+}
+.submit{
+	
+}
+</style>
+
+
+<script type="text/javascript" src="main.js"></script>
+
+</body>
+</html>
