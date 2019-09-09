@@ -4,13 +4,16 @@
 
 <h2>listing an Emp details</h2>
 
-<table >
-	<thead><tr><th> s no </th><th> Name </th><th> age </th><th> Empid </th><th> Gender </th></tr></thead>
-	<tbody id="demo"></tbody>
-</table>
-<br>
-<button type="submit" onClick="addEmp();">Add Emp</button>
-<br><br>
+<div class="wrapper">
+	<table>
+		<thead><tr><th> s no </th><th> Name </th><th> age </th><th> Empid </th><th> Gender </th><th> Delete </th></tr></thead>
+		<tbody id="demo"></tbody>
+	</table>
+	<br>
+	<button type="submit" onClick="addEmp();">Add Emp</button><br><br>
+	<button type="submit" onClick="delEmp();">Del Emp</button>
+	<br><br>
+</div>
 
 <form>
 	<div>
@@ -38,8 +41,15 @@
 
 
 <style>
+.wrapper{
+	display: table;
+	width: 100%;
+	margin-bottom: 50px;
+}
 table{
 	border-collapse: collapse;
+    float: left;
+    margin-right: 25px;
 }
 table th{
 	border: 1px solid #fff;
@@ -54,7 +64,7 @@ form{
 	width: 48%;
     border: 1px solid #ccc;
     padding: 19px;
-    float: left;
+	clear: both;
 }
  p{
 	margin: 0;
@@ -74,8 +84,11 @@ form div p {
 .error + input {
     padding: 7px;
 }
-.submit{
-	
+.delete{
+	cursor: pointer;
+	text-decoration: underline;
+	color: #14823c;
+	font-size: 14px;
 }
 </style>
 

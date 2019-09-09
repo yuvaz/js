@@ -30,7 +30,7 @@ function empList(){
 	var x = "";
 	for(var i = 0; i < emp.length; i++){
 	var y = i + 1;
-	x += `<tr><td> ${y} </td><td> ${emp[i].name} </td><td> ${emp[i].age} </td><td> ${emp[i].id} </td><td> ${emp[i].gender} </td></tr>`;
+	x += `<tr><td> ${y} </td><td> ${emp[i].name} </td><td> ${emp[i].age} </td><td> ${emp[i].id} </td><td> ${emp[i].gender} </td><td> <span class="delete" onclick="delOneEmp(${i});">Delete</span></td></tr>`;
 	};
 	document.getElementById("demo").innerHTML = x;
 };
@@ -44,6 +44,16 @@ function addEmp(){
 				gender: "f"
 			};
 	emp.push(v);
+	empList();
+};
+
+function delEmp(){
+	emp.pop();
+	empList();
+};
+
+function delOneEmp(value){
+	emp.splice(value, 1);
 	empList();
 };
 
